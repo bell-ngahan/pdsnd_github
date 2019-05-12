@@ -20,6 +20,7 @@ def get_filters():
     
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     # Using the .title() statement make the input Data Case insensitive, it is very usefull
+    
     while(1):
       city = input("\nPlease enter the name of the city you want to analyse! New York City, Chicago or Washington?\n").title()
       if city.title() not in('New York City', 'Chicago', 'Washington'):
@@ -83,9 +84,11 @@ def load_data(city, month, day):
         month = months.index(month) + 1
 
     	# filter by month to create the new dataframe
+        
         df = df[df['month'] == month]
 
         # filter by day of week if applicable
+        
     if day != 'all':
         # filter by day of week to create the new dataframe
         df = df[df['day_of_week'] == day.title()]
@@ -157,6 +160,7 @@ def trip_duration_stats(df):
     start_time = time.time()
 
     # TO DO: display total travel time
+    # here is the calculation to theTrip duration
 
     Total_Travel_Time = sum(df['Trip Duration'])
     print('Total travel time:', Total_Travel_Time/86400, " Days")
@@ -216,6 +220,7 @@ def user_stats(df):
     print('-'*40)
     
     # In this Function five raw data are displayed, if it is required by the users
+    
 def raw_data(df):
     user_input = input('Do you want to see raw data? Enter yes or no.\n')
     line_number = 0
@@ -227,6 +232,7 @@ def raw_data(df):
             user_input = input('\nDo you want to see more raw data? Enter yes or no.\n')
         else:
          break 
+        
       # all raw data are called here in the main function
      
 def main():
