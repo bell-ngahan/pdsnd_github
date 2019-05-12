@@ -17,8 +17,9 @@ def get_filters():
     """
 
     print('\nHello! Let\'s explore some US bikeshare data!')
-    # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     
+    # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    # Using the .title() statement make the input Data Case insensitive, it is very usefull
     while(1):
       city = input("\nPlease enter the name of the city you want to analyse! New York City, Chicago or Washington?\n").title()
       if city.title() not in('New York City', 'Chicago', 'Washington'):
@@ -28,6 +29,7 @@ def get_filters():
         break
 
     # TO DO: get user input for month (all, january, february, ... , june)
+    # Using the .title() statement make the input Data Case insensitive, it is very usefull
 
     while(1):
       month = input("\nPlease enter the name of the month you want to analyse! January, February, March, April, May, June or type 'all' if you do not have any preference?\n").title()
@@ -38,6 +40,7 @@ def get_filters():
         break
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+    # Using the .title() statement make the input Data Case insensitive, it is very usefull
 
     while(1):
       day = input("\nPlease enter the name of the day you want to analyse as follows: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or type 'all' if you do not have any preference.\n").title()
@@ -212,6 +215,7 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
     
+    # In this Function five raw data are displayed, if it is required by the users
 def raw_data(df):
     user_input = input('Do you want to see raw data? Enter yes or no.\n')
     line_number = 0
@@ -223,7 +227,7 @@ def raw_data(df):
             user_input = input('\nDo you want to see more raw data? Enter yes or no.\n')
         else:
          break 
-      
+      # all raw data are called here in the main function
      
 def main():
     
